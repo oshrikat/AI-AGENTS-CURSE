@@ -1,0 +1,152 @@
+{
+  "XOM": {
+    "domain": "Energy",
+    "risk_level": "medium",
+    "outlook": "Stable long-term outlook driven by strong cash flow and diversified operations.",
+    "key_risks": ["Oil price volatility", "Regulatory pressure", "High capital expenditures"]
+  },
+  "CVX": {
+    "domain": "Energy",
+    "risk_level": "medium",
+    "outlook": "Positive near-term outlook backed by strong balance sheet and global demand.",
+    "key_risks": ["Commodity price swings", "Geopolitical exposure", "Energy-transition pressure"]
+  },
+  "ENPH": {
+    "domain": "Energy",
+    "risk_level": "high",
+    "outlook": "High-growth potential driven by residential solar expansion.",
+    "key_risks": ["High volatility", "Competition", "Dependence on incentives and rates"]
+  },
+  "FSLR": {
+    "domain": "Energy",
+    "risk_level": "medium",
+    "outlook": "Strong utility-scale solar demand and unique thin-film technology.",
+    "key_risks": ["Policy dependence", "Competition", "Manufacturing cost risk"]
+  },
+  "PARR": {
+    "domain": "Energy",
+    "risk_level": "high",
+    "outlook": "Upside from refining margins and regional expansion.",
+    "key_risks": ["Fuel-price volatility", "Operational disruptions", "Regulatory risk"]
+  },
+  "NVDA": {
+    "domain": "Tech",
+    "risk_level": "medium",
+    "outlook": "Strong AI demand and leadership in data-center GPUs.",
+    "key_risks": ["High valuation", "Export restrictions", "Rising competition"]
+  },
+  "MSFT": {
+    "domain": "Tech",
+    "risk_level": "low",
+    "outlook": "Cloud dominance and rapid AI integration across products.",
+    "key_risks": ["Regulation", "Cloud pricing pressure", "Macro conditions"]
+  },
+  "SMCI": {
+    "domain": "Tech",
+    "risk_level": "high",
+    "outlook": "Rapid growth driven by AI server demand.",
+    "key_risks": ["Volatility", "Customer concentration", "Supply chain issues"]
+  },
+  "ACLX": {
+    "domain": "Tech",
+    "risk_level": "high",
+    "outlook": "Promising CAR-T therapy pipeline and strong collaborations.",
+    "key_risks": ["Clinical uncertainty", "Regulation", "No stable revenue yet"]
+  },
+  "PLTR": {
+    "domain": "Tech",
+    "risk_level": "medium",
+    "outlook": "Growing enterprise and government AI adoption.",
+    "key_risks": ["Gov contract reliance", "Competition", "High expectations"]
+  },
+  "LLY": {
+    "domain": "Health",
+    "risk_level": "low",
+    "outlook": "Leader in diabetes and obesity treatments with strong pipeline.",
+    "key_risks": ["Pricing regulation", "Patent risks", "Manufacturing limits"]
+  },
+  "JNJ": {
+    "domain": "Health",
+    "risk_level": "low",
+    "outlook": "Highly diversified healthcare operations and stable cash flow.",
+    "key_risks": ["Litigation", "Slow-growth segments", "Regulatory issues"]
+  },
+  "VRTX": {
+    "domain": "Health",
+    "risk_level": "medium",
+    "outlook": "Dominant cystic fibrosis franchise and growing gene-editing pipeline.",
+    "key_risks": ["Pipeline concentration", "High R&D cost", "Competition"]
+  },
+  "REGN": {
+    "domain": "Health",
+    "risk_level": "medium",
+    "outlook": "Strong biologics portfolio and expanding commercialization.",
+    "key_risks": ["Patent cliffs", "Ophthalmology competition", "Trial outcomes"]
+  },
+  "CRSP": {
+    "domain": "Health",
+    "risk_level": "high",
+    "outlook": "Long-term potential in CRISPR-based therapies.",
+    "key_risks": ["Clinical uncertainty", "Regulation", "Volatile revenue outlook"]
+  },
+  "JPM": {
+    "domain": "Finance",
+    "risk_level": "medium",
+    "outlook": "Strong balance sheet and diversified banking operations.",
+    "key_risks": ["Interest rate changes", "Credit risk", "Regulatory burden"]
+  },
+  "V": {
+    "domain": "Finance",
+    "risk_level": "low",
+    "outlook": "Global payments growth and high-margin business model.",
+    "key_risks": ["Fintech disruption", "Regulation", "Macro-sensitive volume"]
+  },
+  "SQ": {
+    "domain": "Finance",
+    "risk_level": "high",
+    "outlook": "Growth from digital payments and Cash App ecosystem.",
+    "key_risks": ["Competition", "Regulatory risk", "Volatility"]
+  },
+  "SOFI": {
+    "domain": "Finance",
+    "risk_level": "high",
+    "outlook": "Strong user growth and expansion into digital banking.",
+    "key_risks": ["Credit risk", "Interest-rate exposure", "Regulation"]
+  },
+  "ALLY": {
+    "domain": "Finance",
+    "risk_level": "medium",
+    "outlook": "Strong digital presence and stable auto-loan portfolio.",
+    "key_risks": ["Auto-loan defaults", "Interest rates", "Economic downturn"]
+  },
+  "PG": {
+    "domain": "Consumer_Goods",
+    "risk_level": "low",
+    "outlook": "Reliable global brands with pricing power.",
+    "key_risks": ["Cost inflation", "Currency risks", "Slow growth"]
+  },
+  "KO": {
+    "domain": "Consumer_Goods",
+    "risk_level": "low",
+    "outlook": "Strong global beverage franchise and distribution network.",
+    "key_risks": ["Health trends", "Commodity costs", "Emerging market volatility"]
+  },
+  "SFM": {
+    "domain": "Consumer_Goods",
+    "risk_level": "medium",
+    "outlook": "Growing demand for natural and organic foods.",
+    "key_risks": ["Thin margins", "Competition", "Supply-chain issues"]
+  },
+  "CELH": {
+    "domain": "Consumer_Goods",
+    "risk_level": "high",
+    "outlook": "Rapid expansion in functional energy drinks.",
+    "key_risks": ["Valuation risk", "Competition", "Market saturation"]
+  },
+  "GO": {
+    "domain": "Consumer_Goods",
+    "risk_level": "medium",
+    "outlook": "Steady growth from value-oriented shoppers.",
+    "key_risks": ["Inventory variability", "Consumer spending shifts", "Competition"]
+  }
+}
