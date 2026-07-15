@@ -23,7 +23,9 @@ def load_stock_profiles() -> dict:
     [מה הפונקציה מחזירה]
     - dict: A dictionary containing all stock information where keys are Tickers (e.g., "XOM")
     """
-    filename = "assignment_part_1/required_files/stocks_profiles.json"
+
+    filename = r"required_files\stocks_profiles.json"
+    
     try:
         with open(filename, 'r', encoding='utf-8') as file:
             profiles = json.load(file)

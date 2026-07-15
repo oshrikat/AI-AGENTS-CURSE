@@ -239,15 +239,19 @@ def build_graph() -> StateGraph:
     # Wire the pipeline logic
     builder.set_entry_point("PreferenceCollector")
     
+    # -- הוספת קשתות מפורשות כדי שהצייר ידע למתוח חצים ---
+    builder.add_edge("PreferenceCollector", "StockSelector")
+    builder.add_edge("StockSelector", "LLMExplanation")
+    
     graph = builder.compile()
     
     # Save diagram as agent_s3.png
     try:
         os.makedirs("agents_plots", exist_ok=True)
         png_bytes = graph.get_graph().draw_mermaid_png()
-        with open("agents_plots/agent_s3.png", "wb") as f:
+        with open("agents_plots/agent_diagram_s3.png", "wb") as f:
             f.write(png_bytes)
-        print("[V] Success: Agent diagram saved to 'agents_plots/agent_s3.png'")
+        print("[V] Success: Agent diagram saved to 'agents_plots/agent_diagram_s3.png'")
     except Exception as e:
         print(f"[-] Note: Could not generate graph image: {e}")
         

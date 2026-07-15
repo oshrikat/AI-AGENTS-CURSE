@@ -46,7 +46,7 @@ def load_stock_profiles() -> dict:
     [OUTPUTS]
     - dict: Full dictionary mapping stock tickers to their structural financial criteria.
     """
-    filename = r"assignment_part_1\required_files\stocks_profiles.json"
+    filename = r"required_files\stocks_profiles.json"
     try:
         with open(filename, 'r', encoding='utf-8') as file:
             return json.load(file)
@@ -243,15 +243,19 @@ def build_graph() -> StateGraph:
     # Establish entry route logic
     builder.set_entry_point("PreferenceCollector")
     
+    # --- התיקון: הוספת קשתות מפורשות כדי שהגרף יצויר נכון ---
+    builder.add_edge("PreferenceCollector", "StockSelector")
+    builder.add_edge("StockSelector", "LLMExplanation")
+    
     graph = builder.compile()
     
     # Automatically export structural visualization schematic blueprint to workspace disk
     try:
         os.makedirs("agents_plots", exist_ok=True)
         png_bytes = graph.get_graph().draw_mermaid_png()
-        with open("agents_plots/agent_s2.png", "wb") as f:
+        with open("agents_plots/agent_diagram_s2.png", "wb") as f:
             f.write(png_bytes)
-        print("[V] Success: Agent diagram saved to 'agents_plots/agent_s2.png'")
+        print("[V] Success: Agent diagram saved to 'agents_plots/agent_diagram_s2.png'")
     except Exception as e:
         print(f"[-] Note: Could not generate graph image: {e}")
         

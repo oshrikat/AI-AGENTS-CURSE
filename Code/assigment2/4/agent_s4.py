@@ -289,16 +289,34 @@ def build_graph() -> StateGraph:
     # 2. הגדרת נקודת ההתחלה
     builder.set_entry_point("UserInput")
     
-# 3. חיבור הקשתות והלולאות (מעודכן ותקין)
+    # 3. חיבור הקשתות והלולאות (מעודכן עם מיפוי לציור הגרף)
     builder.add_edge("UserInput", "IntentClassifier")
-    builder.add_conditional_edges("IntentClassifier", route_intent)
     
-    # לולאת חזרה 1: אם המשתמש לא הובן, נחזיר אותו לתחילת המסלול כדי שיקליד שוב
+    # עריכה: הוספנו מילון מיפוי כדי שהגרף יצויר נכון
+    builder.add_conditional_edges(
+        "IntentClassifier", 
+        route_intent,
+        {
+            "RAG_Stock": "RAG_Stock",
+            "CheckRequirements": "CheckRequirements",
+            "AskRephrase": "AskRephrase"
+        }
+    )
+    
+    # לולאת חזרה 1
     builder.add_edge("AskRephrase", "UserInput")
     
-    builder.add_conditional_edges("CheckRequirements", route_requirements)
+    # עריכה: הוספנו מילון מיפוי כדי שהגרף יצויר נכון
+    builder.add_conditional_edges(
+        "CheckRequirements", 
+        route_requirements,
+        {
+            "AskClarification": "AskClarification",
+            "RAG_Portfolio": "RAG_Portfolio"
+        }
+    )
     
-    # לולאת חזרה 2: אם חסרים נתונים, נחזור לבדוק שוב אחרי שהוא עונה
+    # לולאת חזרה 2
     builder.add_edge("AskClarification", "CheckRequirements")
     
     builder.add_edge("RAG_Stock", "Analysis")
@@ -311,9 +329,9 @@ def build_graph() -> StateGraph:
     try:
         os.makedirs("agents_plots", exist_ok=True)
         png_bytes = graph.get_graph().draw_mermaid_png()
-        with open("agents_plots/agent_s4.png", "wb") as f:
+        with open("agents_plots/agent_diagram_s4.png", "wb") as f:
             f.write(png_bytes)
-        print("[V] Success: Multi-Intent Agent diagram saved to 'agents_plots/agent_s4.png'")
+        print("[V] Success: Multi-Intent Agent diagram saved to 'agents_plots/agent_diagram_s4.png'")
     except Exception as e:
         print(f"[-] Note: Could not generate graph image: {e}")
         

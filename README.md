@@ -24,6 +24,12 @@ The project is developed in iterative stages, gradually upgrading a basic script
   * `unknown`: A fallback loop requesting the user to rephrase.
 * **Clarification Loops:** If a user requests a portfolio but misses required details (like budget or risk), the agent dynamically loops back to ask for the missing data before proceeding to the vector search.
 
+### ✅ Stage 5: Structured Output & Robust Routing
+* **Pydantic Schemas:** Replaced brittle string parsing with strictly typed data models (`IntentResult` and `RequirementsResult`).
+* **Structured LLM Output:** Integrated LangChain's `with_structured_output()` to force the LLM to return reliable, machine-readable objects instead of free-form text.
+* **Deterministic Conditional Routing:** Graph transitions, clarification loops, and branches are now driven dynamically by extracted object properties (e.g., arrays of missing fields), ensuring 100% stable control flow.
+
+
 ### 🚧 Upcoming Stages
 *(This section will be updated as the course progresses and new features are added)*
 
