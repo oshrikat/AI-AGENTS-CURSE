@@ -29,6 +29,10 @@ The project is developed in iterative stages, gradually upgrading a basic script
 * **Structured LLM Output:** Integrated LangChain's `with_structured_output()` to force the LLM to return reliable, machine-readable objects instead of free-form text.
 * **Deterministic Conditional Routing:** Graph transitions, clarification loops, and branches are now driven dynamically by extracted object properties (e.g., arrays of missing fields), ensuring 100% stable control flow.
 
+### 🚀 Stage 6: Agentic Tool Use
+* **Dynamic Tool Calling:** Transitioned from a hard-coded graph to an agentic loop where the LLM dynamically decides which tools to invoke (`get_stock_profile`, `get_recent_news`, `get_historical_stats`, `compute_portfolio_metrics`).
+* **ReAct Loop:** Implemented an iterative tool-calling loop that executes tools as needed until the agent accumulates sufficient information to produce a final response.
+* **Strict Structured Output:** Enforced schema adherence using `Pydantic` and `with_structured_output` for final JSON responses (`StockExplanation`, `PortfolioSuggestion`), ensuring robust and verifiable outputs.
 
 ### 🚧 Upcoming Stages
 *(This section will be updated as the course progresses and new features are added)*
